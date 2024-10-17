@@ -1,10 +1,24 @@
 {
     "name": "gii/module-service",
     "description": "module for service in klinik or puskesmas",
-    "license": "MIT",
+    "type": "library",
+    "require": {
+        "php": "^7.0|^8.0",
+        "guzzlehttp/guzzle": "^7.8",
+        "http-interop/http-factory-guzzle": "^1.2",
+        "illuminate/support": "^11.26",
+        "symfony/process": "^7.1"
+    },
     "autoload": {
         "psr-4": {
             "Gii\\ModuleService\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Gii\\ModuleService\\ModuleServiceProvider"
+            ]
         }
     },
     "authors": [
@@ -13,6 +27,6 @@
             "email": "alghiarrifrahman@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
-    "require": {}
+    "license": "MIT",
+    "minimum-stability": "dev"
 }
