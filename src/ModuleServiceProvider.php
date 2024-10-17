@@ -27,7 +27,7 @@ class ModuleServiceProvider extends BaseServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../assets/config/config.php' => config_path('config.php'),
+            __DIR__.'/../assets/config/module-service.php' => config_path('module-service.php'),
         ], 'config');
     }
 }
