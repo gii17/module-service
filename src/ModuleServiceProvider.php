@@ -1,6 +1,6 @@
 <?php
 
-namespace Aibnuhibban\BitbucketLaravel;
+namespace Gii\ModuleService;
 
 use Gii\ModuleService\Services\Service;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;

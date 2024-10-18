@@ -2,8 +2,10 @@
 
 namespace Gii\ModuleService\Services;
 
-class Service {
+use Zahzah\LaravelSupport\Supports\PackageManagement;
+
+class Service extends PackageManagement {
     public function index() {
-        return "alghi";
+        $this->ServiceModel()->get();
     }
 } 
