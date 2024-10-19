@@ -3,15 +3,15 @@
 namespace Gii\ModuleService\Models;
 
 use Illuminate\Database\Eloquent\Concerns\HasUlids;
+use Zahzah\LaravelHasProps\Concerns\HasProps;
 use Zahzah\LaravelSupport\Models\BaseModel;
 
 class Service extends BaseModel {
-    use HasUlids;
+    use HasUlids,HasProps;
 
-    protected $keyType         = "string";
-    protected $primaryKey      = "id"; 
+    protected $list            = ["id", "name","flag"];
+    protected $show            = ["id", "name","flag"];
     protected $__flags_Service = ['PATIENT_TYPE'];
-    protected $fillable        = ['id','name','flag'];
 
     protected static function booted(): void{
         parent::booted();

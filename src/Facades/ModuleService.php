@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Facade;
 /**
  * @see \Gii\Service-module\Services\
  */
-class Service extends Facade
+class ModuleService extends Facade
 {
     protected static function getFacadeAccessor()
     {
