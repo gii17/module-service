@@ -11,7 +11,7 @@ class Service extends BaseModel {
 
     protected $list            = ["id", "name","flag"];
     protected $show            = ["id", "name","flag"];
-    protected $__flags_Service = ['PATIENT_TYPE'];
+    protected $__flags_Service = ['PATIENT_TYPE','MEDIC_SERVICE'];
 
     protected static function booted(): void{
         parent::booted();

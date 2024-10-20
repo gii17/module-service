@@ -11,12 +11,12 @@ class Service extends PackageManagement {
         return $this->ServiceModel()->get();
     }
 
-    public function getDataServiceById(mixed $id) : ?ModelsService {
-        return $this->ServiceModel()->refind($id);
+    public function getDataServiceById(array $flags, mixed $id) : ?ModelsService {
+        return $this->ServiceModel()->setIdentityFlags($flags)->refind($id);
     }
 
     public function getDataByFlag(array $flags) : ?ModelsService {
-        return $this->ServiceModel();
+        return $this->ServiceModel()->setIdentityFlags($flags);
     }
 
 
