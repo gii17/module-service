@@ -5,7 +5,7 @@ namespace Gii\ModuleService;
 use Gii\ModuleService\Services\Service;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
-class ModuleServiceServiceProvider extends BaseServiceProvider
+class ModuleServiceServiceProvider extends EnvironmentServiceProvider
 {
     /**
      * Register services.
@@ -14,20 +14,9 @@ class ModuleServiceServiceProvider extends BaseServiceProvider
      */
     public function register()
     {
+        $this->registerNamespace()->registerModel()->registerProvider(); 
         $this->app->singleton('service', function ($app) {
             return new Service();
         });
-    }
-
-    /**
-     * Bootstrap services.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-        $this->publishes([
-            __DIR__.'/../assets/config/module-service.php' => config_path('module-service.php'),
-        ], 'config');
     }
 }
