@@ -21,7 +21,8 @@ class ModuleServiceProvider extends BaseServiceProvider
                 '*',
                 'Services'  => function(){
                     $this->binds([
-                        Contracts\ModuleService::class => new ModelsService()
+                        Contracts\ModuleService::class => new ModelsService(),
+                        'service'                      => new Service(),
                     ]);
                 },
              ]);
