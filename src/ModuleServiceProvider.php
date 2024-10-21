@@ -5,7 +5,7 @@ namespace Gii\ModuleService;
 use Gii\ModuleService\Services\Service;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
-class ModuleServiceServiceProvider extends EnvironmentServiceProvider
+class ModuleServiceProvider extends EnvironmentServiceProvider
 {
     /**
      * Register services.
