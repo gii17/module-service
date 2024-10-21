@@ -1,6 +1,6 @@
 <?php
 
-namespace Zahzah\ModuleService\Contracts;
+namespace Gii\ModuleService\Contracts;
 
 interface ModuleService{
 
