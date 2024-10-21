@@ -23,7 +23,7 @@ class InstallMakeCommand extends EnvironmentCommand{
      */
     public function handle()
     {
-        $provider = 'Gii\ModuleService\ModuleServiceServiceProvider';
+        $provider = 'Gii\ModuleService\ModuleServiceProvider';
 
         $this->callSilent('vendor:publish', [
             '--provider' => $provider,
