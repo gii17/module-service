@@ -14,9 +14,10 @@ class ModuleServiceServiceProvider extends EnvironmentServiceProvider
      */
     public function register()
     {
-        $this->registerNamespace()->registerModel()->registerProvider(); 
-        $this->app->singleton('service', function ($app) {
-            return new Service();
-        });
+        $this->registerMainClass(Service::class)
+             ->registerCommandService(Providers\CommandServiceProvider::class)
+             ->registers([
+                '*',
+             ]);
     }
 }
