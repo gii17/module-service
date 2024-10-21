@@ -16,7 +16,7 @@ class Service extends PackageManagement {
     }
 
     public function getDataByFlag(array $flags) : ?ModelsService {
-        return $this->ServiceModel()->setIdentityFlags($flags);
+        return $this->ServiceModel()->setIdentityFlags($flags)->get();
     }
 
 
